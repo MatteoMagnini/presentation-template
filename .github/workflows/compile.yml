@@ -8,6 +8,7 @@ env:
   LATEX_ROOT: abcd-venue-20XX-talk
 jobs:
   compile:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
