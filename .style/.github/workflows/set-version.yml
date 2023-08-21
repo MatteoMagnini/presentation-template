@@ -1,0 +1,33 @@
+name: set-version
+on:
+  push:
+    branches:
+      - main
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+          
+      - name: Get Version
+        id: get-version
+        run: echo "::set-output name=version::$(cat beamertheme*.sty | python .github/scripts/compute-version.py)"
+        
+      - name: Zip files to release
+        run: zip style.zip *.sty *.pdf
+
+      - name: Release Assets
+        id: upload-release-assets
+        run: |
+          set -x
+          ASSETS=()
+          for A in *.zip; do
+            ASSETS+=("-a" "$A")
+            echo "Releasing $A"
+          done
+          RELEASE_TAG='${{ steps.get-version.outputs.version }}'
+          hub release create "${ASSETS[@]}" -m "$RELEASE_TAG" "$RELEASE_TAG"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
