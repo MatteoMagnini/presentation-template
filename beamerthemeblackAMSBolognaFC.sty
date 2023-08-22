@@ -24,7 +24,7 @@
 %
 % APICe BibTeX field display enabled
 \if@doApice
-\newcommand{\apicepar}[1]{{\textcolor{bolognafcsilver!90!white}{\tiny\href{https://apice.unibo.it/xwiki/bin/view/Publications/#1}{\textsf{\it(APICe)}}}}}
+\newcommand{\apicepar}[1]{{\textcolor{bolognafcpayne!90!white}{\tiny\href{https://apice.unibo.it/xwiki/bin/view/Publications/#1}{\textsf{\it(APICe)}}}}}
 \else
 \newcommand{\apicepar}[1]{}
 \fi
@@ -40,65 +40,65 @@
 %\pgfdeclareimage[width=\paperwidth]{bg}{img/almacesena-background}
 \setbeamertemplate{background}{\pgfuseimage{bg}}
 % text
-\setbeamercolor{normal text}{fg=bolognafcwhite!90!black}
-\setbeamercolor{alerted text}{fg=bolognafcgold!90!white}
-\setbeamercolor{quote}{fg=bolognafcblue!50!white}
+\setbeamercolor{normal text}{fg=bolognafcwhite}
+\setbeamercolor{alerted text}{fg=bolognafcsunglow}
+\setbeamercolor{quote}{fg=bolognafctea}
 % bullets
-\setbeamercolor*{item}{fg=bolognafcgold,bg=black}
-\setbeamercolor*{itemize items}{fg=bolognafcgold,bg=black}
-\setbeamercolor*{itemize subitem}{fg=bolognafcgold,bg=black}
+\setbeamercolor*{item}{fg=bolognafcsunglow,bg=black}
+\setbeamercolor*{itemize items}{fg=bolognafcsunglow,bg=black}
+\setbeamercolor*{itemize subitem}{fg=bolognafcsunglow,bg=black}
 % front page
-\setbeamercolor{title}{fg=bolognafcsilver!75!white}
-\setbeamercolor{subtitle}{fg=bolognafcsilver!90!white}
-\setbeamercolor{author}{fg=bolognafcsilver!40!black}
-\setbeamercolor{institute}{fg=bolognafcblue!40!white}
-\setbeamercolor{date}{fg=bolognafcblue!40!white}
+\setbeamercolor{title}{fg=bolognafcblack,bg=bolognafcsunglow}
+\setbeamercolor{subtitle}{fg=bolognafcpayne!75!bolognafctea}
+\setbeamercolor{author}{fg=bolognafcpayne!75!bolognafctea}
+\setbeamercolor{institute}{fg=bolognafcpayne!75!bolognafctea}
+\setbeamercolor{date}{fg=bolognafcpayne!75!bolognafctea}
 % block header
-\setbeamercolor{block title}{use=structure,fg=bolognafcsilver!90!white,bg=bolognafcblue!75!black}
-\setbeamercolor{block title alerted}{use=alerted text,fg=bolognafcsilver!25!white,bg=bolognafcblue!75!black}
-\setbeamercolor{block title example}{use=example text,fg=bolognafcblue!50!white,bg=bolognafcblue!75!black}
+\setbeamercolor{block title}{use=structure,fg=bolognafcblack,bg=bolognafctea}
+\setbeamercolor{block title alerted}{use=alerted text,fg=bolognafcwhite,bg=bolognafcpayne}
+\setbeamercolor{block title example}{use=example text,fg=bolognafcwhite,bg=bolognafcpayne}
 % block body
-\setbeamercolor{block body}{parent=normal text,use=block title,bg=bolognafcblue!40!black}
-\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=bolognafcblue!40!black}
-\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=bolognafcblue!40!black}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=bolognafcpayne}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=bolognafctea,fg=bolognafcblack}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=bolognafctea,fg=bolognafcblack}
 % table of content
-\setbeamercolor{section in toc}{fg=bolognafcsilver!90!white}
+\setbeamercolor{section in toc}{fg=bolognafcwhite}
 \setbeamercolor{section in toc shaded}{fg=black}
 \setbeamertemplate{section in toc shaded}[default][70]
-\setbeamertemplate{subsection in toc shaded}[fg][bolognafcsilver!20!black]
-\setbeamercolor{subsection in toc}{fg=bolognafcsilver!90!black}
+\setbeamertemplate{subsection in toc shaded}[fg][black]
+\setbeamercolor{subsection in toc}{fg=bolognafcwhite}
 % footnote
-\setbeamercolor{footnote mark}{fg=bolognafcred!90!white}
-\setbeamercolor{footnote}{fg=bolognafcblue!25!gray}
+\setbeamercolor{footnote mark}{fg=bolognafcpayne}
+\setbeamercolor{footnote}{fg=bolognafcpayne}
 % biblio
 \setbeamertemplate{bibliography item}{\insertbiblabel}
-\setbeamercolor{bibliography entry author}{fg=bolognafcblue!75!white}
-\setbeamercolor{bibliography entry title}{fg=bolognafcsilver!75!white}
-\setbeamercolor{bibliography entry location}{fg=bolognafcblue!75!white}
+\setbeamercolor{bibliography entry author}{fg=bolognafcpayne}
+\setbeamercolor{bibliography entry title}{fg=bolognafcwhite}
+\setbeamercolor{bibliography entry location}{fg=bolognafcpayne}
 % Invisible
 \setbeamercolor{bibliography entry note}{fg=black}
 % abstract
-\setbeamercolor*{abstract title}{fg=bolognafcblue!50!white}
+\setbeamercolor*{abstract title}{fg=bolognafctea}
 \setbeamerfont*{abstract title}{family=\sffamily}
 \setbeamercolor*{abstract}{fg=purple!50!white}
 \setbeamerfont*{abstract}{family=\rmfamily,size=\small}
 % Citation
-\newcommand{\ccite}[1]{{\textcolor{bolognafcsilver!80!white}{\textsuperscript{\tiny\cite{#1}}}}}
-\newcommand{\cccite}[1]{{\textcolor{bolognafcsilver}{\textsuperscript{\tiny\cite{#1}}}}}
+\newcommand{\ccite}[1]{{\textcolor{bolognafctea}{\textsuperscript{\tiny\cite{#1}}}}}
+\newcommand{\cccite}[1]{{\textcolor{bolognafctea}{\textsuperscript{\tiny\cite{#1}}}}}
 % URL
-\newcommand{\uurl}[1]{{\textcolor{bolognafcred!50!white}{\scriptsize\url{#1}}}}
-\newcommand{\uuurl}[1]{{\textcolor{bolognafcsilver!50!white}{\tiny\url{#1}}}}
+\newcommand{\uurl}[1]{{\textcolor{bolognafcsunglow!50!white}{\scriptsize\url{#1}}}}
+\newcommand{\uuurl}[1]{{\textcolor{bolognafcsunglow!90!white}{\tiny\url{#1}}}}
 % DOI
-\newcommand{\ddoi}[1]{{\textcolor{bolognafcred!50!white}{\scriptsize\href{http://dx.doi.org/#1}{DOI:#1}}}}
-\newcommand{\dddoi}[1]{{\textcolor{bolognafcsilver!50!white}{\tiny\href{http://dx.doi.org/#1}{DOI:#1}}}}
+\newcommand{\ddoi}[1]{{\textcolor{bolognafcsunglow!50!white}{\scriptsize\href{http://dx.doi.org/#1}{DOI:#1}}}}
+\newcommand{\dddoi}[1]{{\textcolor{bolognafcsunglow!90!white}{\tiny\href{http://dx.doi.org/#1}{DOI:#1}}}}
 % emph
 \renewcommand{\emph}[1]{\textcolor{white}{\textit{#1}}}
 % alert
-%\renewcommand{\alert}[1]{\textcolor{bolognafcgold!90!white}{#1}}
-\newcommand{\aalert}[1]{\textcolor{bolognafcgold!90!white}{\it#1}}
+%\renewcommand{\alert}[1]{\textcolor{bolognafcsunglow!90!white}{#1}}
+\newcommand{\aalert}[1]{\textcolor{bolognafcsunglow!90!white}{\it#1}}
 % speaker
-\newcommand{\speaker}[1]{\textcolor{bolognafcblue!75!red}{#1}}
-\newcommand{\sspeaker}[1]{\textcolor{bolognafcred!20!white}{\it#1}}
+\newcommand{\speaker}[1]{\textcolor{bolognafcwhite}{#1}}
+\newcommand{\sspeaker}[1]{\textcolor{bolognafcwhite}{\it#1}}
 %
 \usepackage[T1]{fontenc}
 %
