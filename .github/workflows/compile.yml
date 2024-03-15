@@ -17,7 +17,7 @@ jobs:
           submodules: recursive
 
       - name: Build latex
-        uses: xu-cheng/latex-action@2.7.0
+        uses: xu-cheng/latex-action@2.8.2
         with:
           root_file: ${{ env.LATEX_ROOT }}.tex
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -shell-escape
